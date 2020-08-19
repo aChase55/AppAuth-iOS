@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
     @remarks Has no effect if no UI is presented.
     @param completion The block to be called when the dismiss operations ends
  */
-- (void)dismissExternalUserAgentAnimated:(BOOL)animated completion:(void (^)(void))completion;
+- (void)dismissUserAgentAnimated:(BOOL)animated completion:(void (^)(void))completion;
 
 @end
 

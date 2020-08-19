@@ -178,7 +178,7 @@ NS_ASSUME_NONNULL_BEGIN
   return openedUserAgent;
 }
 
-- (void)dismissExternalUserAgentAnimated:(BOOL)animated completion:(void (^)(void))completion {
+- (void)dismissUserAgentAnimated:(BOOL)animated completion:(void (^)(void))completion {
   if (!_externalUserAgentFlowInProgress) {
     // Ignore this call if there is no authorization flow in progress.
     if (completion) completion();

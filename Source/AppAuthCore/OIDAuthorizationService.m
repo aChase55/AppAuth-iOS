@@ -90,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)cancelWithCompletion:(nullable void (^)(void))completion {
-  [_externalUserAgent dismissExternalUserAgentAnimated:YES completion:^{
+  [_externalUserAgent dismissUserAgentAnimated:YES completion:^{
       NSError *error = [OIDErrorUtilities errorWithCode:OIDErrorCodeUserCanceledAuthorizationFlow
                                         underlyingError:nil
                                             description:@"Authorization flow was cancelled."];
@@ -167,7 +167,7 @@ NS_ASSUME_NONNULL_BEGIN
       }
   }
 
-  [_externalUserAgent dismissExternalUserAgentAnimated:YES completion:^{
+  [_externalUserAgent dismissUserAgentAnimated:YES completion:^{
       [self didFinishWithResponse:response error:error];
   }];
 
@@ -236,7 +236,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)cancelWithCompletion:(nullable void (^)(void))completion {
-  [_externalUserAgent dismissExternalUserAgentAnimated:YES completion:^{
+  [_externalUserAgent dismissUserAgentAnimated:YES completion:^{
     NSError *error = [OIDErrorUtilities
                       errorWithCode:OIDErrorCodeUserCanceledAuthorizationFlow
                       underlyingError:nil
@@ -287,7 +287,7 @@ NS_ASSUME_NONNULL_BEGIN
                             userInfo:userInfo];
   }
   
-  [_externalUserAgent dismissExternalUserAgentAnimated:YES completion:^{
+  [_externalUserAgent dismissUserAgentAnimated:YES completion:^{
     [self didFinishWithResponse:response error:error];
   }];
   
